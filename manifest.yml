@@ -1,0 +1,13 @@
+applications:
+- name: stackato-rabbitmq
+  buildpack: https://github.com/cloudfoundry/go-buildpack
+  memory: 32M
+  stackato:
+    env:
+      GOVERSION:
+        default: 1.6.2
+      GO15VENDOREXPERIMENT: 0
+    ignores:
+    - .git
+  services:
+  - stackato-rabbitmq
